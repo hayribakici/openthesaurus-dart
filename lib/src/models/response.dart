@@ -1,5 +1,6 @@
 part of openthesaurus.models;
 
+/// Json representation of the root
 @JsonSerializable(createToJson: false)
 class OpenThesaurusResponse {
 
