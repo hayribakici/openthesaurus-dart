@@ -22,15 +22,10 @@ class OpenThesaurusApi {
   String handleErrors(http.Response response) {
     final responseBody = utf8.decode(response.bodyBytes);
     if (response.statusCode >= 400) {
-      // final jsonMap = json.decode(responseBody);
-      //   final error = SpotifyError.fromJson(jsonMap['error']);
-      //   if (response.statusCode == 429) {
-      //     throw ApiRateException.fromSpotify(
-      //         error, num.parse(response.headers['retry-after']!));
-      //   }
-      //   throw SpotifyException.fromSpotify(
-      //     error,
-      //   );
+      if (response.statusCode == 429) {
+        throw ApiRequestExceededError();
+      }
+      throw Exception();
     }
     return responseBody;
   }
@@ -41,16 +36,11 @@ class OpenThesaurusApi {
       return handleErrors(await request());
     } catch (ex) {
       return Future.error(ex);
-      //   if (i == retryLimit - 1) rethrow;
-      //   print(
-      //       'Spotify API rate exceeded. waiting for ${ex.retryAfter} seconds');
-      //   _shouldWait = true;
-      //   unawaited(Future.delayed(Duration(seconds: ex.retryAfter.toInt()))
-      //       .then((v) => _shouldWait = false));
-      // }
     }
   }
 
   Future<http.Response> httpget(Uri url, {Map<String, String>? headers}) =>
       http.get(url, headers: headers);
 }
+
+class ApiRequestExceededError extends Error {}

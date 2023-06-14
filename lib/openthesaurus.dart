@@ -53,7 +53,7 @@ class OpenThesaurus {
       int from = 0,
       int max = 10}) async {
     assert(query.isNotEmpty, 'Search query cannot be empty');
-    assert(from >= 0, "Parameter from cannot be < 0");
+    assert(from >= 0, 'Parameter \'from\' cannot be < 0');
     return await _api._get({
       'q': query,
       'similar': similar,
