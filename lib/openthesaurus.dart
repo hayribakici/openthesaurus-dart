@@ -22,39 +22,48 @@ class OpenThesaurus {
 
   OpenThesaurus(this._api);
 
-  Future<List<SynonymSet>> get(String query) async =>
-      (await getWith(query)).synonymSet ?? [];
+  Future<List<SynonymSet>> get(String query) async {
+    assert(query.isNotEmpty, 'Search query cannot be empty');
+    return (await getWith(query)).synonymSet ?? [];
+  }
 
   Future<OpenThesaurusResponse> getWith(String query,
-          {bool similar = false,
-          bool startsWith = false,
-          bool superSet = false,
-          bool subSet = false,
-          bool baseForm = false}) async =>
-      await _api._get({
-        'similar': similar,
-        'startswith': startsWith,
-        'supersynsets': superSet,
-        'subsynsets': subSet,
-        'baseform': baseForm,
-      });
+      {bool similar = false,
+      bool startsWith = false,
+      bool superSet = false,
+      bool subSet = false,
+      bool baseForm = false}) async {
+    assert(query.isNotEmpty, 'Search query cannot be empty');
+    return await _api._get({
+      'q': query,
+      'similar': similar,
+      'startswith': startsWith,
+      'supersynsets': superSet,
+      'subsynsets': subSet,
+      'baseform': baseForm,
+    });
+  }
 
   Future<OpenThesaurusResponse> withSubString(String query,
-          {bool similar = false,
-          bool startsWith = false,
-          bool superSet = false,
-          bool subSet = false,
-          bool baseForm = false,
-          int from = 0,
-          int max = 10}) async =>
-      await _api._get({
-        'similar': similar,
-        'startswith': startsWith,
-        'supersynsets': superSet,
-        'subsynsets': subSet,
-        'baseform': baseForm,
-        'substring': true,
-        'substringFromResults': from,
-        'substringMaxResults': max,
-      });
+      {bool similar = false,
+      bool startsWith = false,
+      bool superSet = false,
+      bool subSet = false,
+      bool baseForm = false,
+      int from = 0,
+      int max = 10}) async {
+    assert(query.isNotEmpty, 'Search query cannot be empty');
+    assert(from >= 0, "Parameter from cannot be < 0");
+    return await _api._get({
+      'q': query,
+      'similar': similar,
+      'startswith': startsWith,
+      'supersynsets': superSet,
+      'subsynsets': subSet,
+      'baseform': baseForm,
+      'substring': true,
+      'substringFromResults': from,
+      'substringMaxResults': max,
+    });
+  }
 }
