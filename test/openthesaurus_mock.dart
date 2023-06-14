@@ -4,7 +4,7 @@ import 'package:openthesaurus/openthesaurus.dart';
 
 /// Mock class for making requests
 class OpenThesaurusMock extends OpenThesaurus {
-  OpenThesaurusMock() : super(OpenThesaurusApiMock())
+  OpenThesaurusMock() : super(OpenThesaurusApiMock());
 }
 
 class OpenThesaurusApiMock extends OpenThesaurusApi {
