@@ -1,13 +1,12 @@
 name: openthesaurus
 description: A simple command-line application for requesting [openthesaurus.de](https://openthesaurus.de).
 version: 0.0.1
-# repository: https://github.com/my_org/my_repo
+repository: https://github.com/hayribakici/openthesaurus-dart
 
 environment:
   sdk: '>=2.19.0 <3.0.0'
 
 dependencies:
-  # path: ^1.8.0
   json_annotation: ^4.8.1
   http: ^0.13.3
 
