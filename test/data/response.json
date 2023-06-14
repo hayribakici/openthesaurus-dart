@@ -1,0 +1,150 @@
+{
+  "metaData": {
+    "apiVersion": "0.2",
+    "warning": "ACHTUNG: Bitte vor ernsthafter Nutzung feedback@openthesaurus.de kontaktieren, um bei API-\u00c4nderungen informiert zu werden",
+    "copyright": "Copyright (C) 2022 Daniel Naber (www.danielnaber.de)",
+    "license": "Creative Commons Attribution-ShareAlike 4.0 or GNU LESSER GENERAL PUBLIC LICENSE Version 2.1",
+    "source": "https://www.openthesaurus.de",
+    "date": "Wed Jun 14 20:37:44 CEST 2023"
+  },
+  "synsets": [
+    {
+      "id": 13178,
+      "categories": [],
+      "terms": [
+        {
+          "term": "Hand"
+        },
+        {
+          "term": "Greifhand"
+        },
+        {
+          "term": "Flosse",
+          "level": "umgangssprachlich"
+        },
+        {
+          "term": "Kralle",
+          "level": "umgangssprachlich"
+        },
+        {
+          "term": "Pranke",
+          "level": "umgangssprachlich"
+        },
+        {
+          "term": "Pfote",
+          "level": "derb"
+        }
+      ],
+      "supersynsets": [
+        [
+          {
+            "term": "K\u00f6rperteil"
+          }
+        ]
+      ],
+      "subsynsets": []
+    },
+    {
+      "id": 37737,
+      "categories": [],
+      "terms": [
+        {
+          "term": "Hand (Fu\u00dfball)"
+        },
+        {
+          "term": "Handspiel"
+        }
+      ],
+      "supersynsets": [],
+      "subsynsets": []
+    },
+    {
+      "id": 13382,
+      "categories": [],
+      "terms": [
+        {
+          "term": "von Hand"
+        },
+        {
+          "term": "hand..."
+        },
+        {
+          "term": "in Handarbeit"
+        },
+        {
+          "term": "manuell"
+        },
+        {
+          "term": "mit der Hand"
+        },
+        {
+          "term": "per Hand"
+        },
+        {
+          "term": "h\u00e4ndisch",
+          "level": "fachsprachlich"
+        }
+      ],
+      "supersynsets": [],
+      "subsynsets": []
+    }
+  ],
+  "similarterms": [
+    {
+      "term": "Hand (Fu\u00dfball)",
+      "distance": 0
+    },
+    {
+      "term": "Handy",
+      "distance": 1
+    },
+    {
+      "term": "Hang",
+      "distance": 1
+    },
+    {
+      "term": "Hang (zu)",
+      "distance": 1
+    },
+    {
+      "term": "Hund",
+      "distance": 1
+    }
+  ],
+  "substringterms": [
+    {
+      "term": "(alle) F\u00e4den in der Hand haben"
+    },
+    {
+      "term": "(alles) fest in deutscher Hand"
+    },
+    {
+      "term": "(als Dankesch\u00f6n ein) feuchter H\u00e4ndedruck"
+    },
+    {
+      "term": "(am Anfang) schonend behandeln"
+    },
+    {
+      "term": "(auf etwas) Hand drauf haben"
+    },
+    {
+      "term": "(Ausgabe) letzter Hand"
+    },
+    {
+      "term": "(da ist / es gibt) kein(en) Handlungsbedarf"
+    },
+    {
+      "term": "(da) hat man nichts in der Hand"
+    },
+    {
+      "term": "(dar\u00fcber) wird nicht verhandelt"
+    },
+    {
+      "term": "(das) Aushandeln"
+    }
+  ],
+  "baseforms":[
+    "Hand"
+  ]
+
+}
