@@ -6,7 +6,10 @@ This is a simple dart library for accessing the [openthesaurus](https://www.open
 
 Create an instance with 
 
-```dart 
+```dart
+
+import 'package:openthesaurus/openthesaurus.dart';
+
 var ot = OpenThesaurus.create();
 ```
 
