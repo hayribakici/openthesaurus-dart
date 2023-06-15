@@ -16,7 +16,7 @@ class SimilarTerm extends Term {
       _$SimilarTermFromJson(json);
   SimilarTerm();
 
-  /// Distance to the queried word 
+  /// Distance to the queried word
   /// (`0` meaning very close and `>=3` meaning not close.)
   int? distance;
 }
@@ -32,7 +32,7 @@ class SynonymTerm extends Term {
 
   SynonymTerm();
 
-  /// Level of term usage. Can be [Level.colloquial], 
+  /// Level of term usage. Can be [Level.colloquial],
   /// [Level.exalted], [Level.rough] or a [Level.technical] term.
   @JsonKey(fromJson: _levelFromJson)
   Level? level;
@@ -42,10 +42,13 @@ class SynonymTerm extends Term {
 enum Level {
   /// A colloquial term
   colloquial(key: 'umgangssprachlich'),
+
   /// A technical term
   technical(key: 'fachsprachlich'),
+
   /// A rough term
   rough(key: 'derb'),
+
   /// An exalted term
   exalted(key: 'gehoben');
 

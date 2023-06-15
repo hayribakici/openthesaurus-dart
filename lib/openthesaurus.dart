@@ -15,7 +15,6 @@ import 'package:openthesaurus/openthesaurus.dart';
 
 part 'src/openthesaurus_api.dart';
 
-
 class OpenThesaurus {
   /// Creates an instance of this class for requesting synonyms.
   factory OpenThesaurus.create() => OpenThesaurus(OpenThesaurusApi());
@@ -32,7 +31,7 @@ class OpenThesaurus {
 
   /// Retrieve a collection of synonyms based on the given [query] and
   /// with the following options. Retrieve ...
-  /// 
+  ///
   /// * [similar] terms
   /// * terms that [startsWith] the same letters as the [query]
   /// * [superSet] terms, that are more generic
@@ -57,13 +56,13 @@ class OpenThesaurus {
 
   /// Retrieve a collection of synonyms based on the given [query] and
   /// with the following options. Retrieve ...
-  /// 
+  ///
   /// * [similar] terms
   /// * terms that [startsWith] the same letters as the [query]
   /// * [superSet] terms, that are more generic
   /// * [subSet] terms, that are more specific
   /// * the [baseForm] of the [query]
-  /// * terms that contain the substring of the [query], starting [from] 
+  /// * terms that contain the substring of the [query], starting [from]
   /// a position until the [max].
   Future<OpenThesaurusResponse> getWithSubString(String query,
       {bool similar = false,
