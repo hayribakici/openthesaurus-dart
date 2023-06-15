@@ -28,23 +28,23 @@ Retrieve synonyms with options with
 
 ```dart
 var response = ot.getWith(similar: true,
-startsWith: true, 
-superSet: true, 
-subSet: true, 
-baseForm: true);
+  startsWith: true, 
+  superSet: true, 
+  subSet: true, 
+  baseForm: true);
 ```
 
 or 
 
 ```dart
 var response = ot.getWithSubString(similar: true,
-startsWith: true,
-superSet: true, 
-subSet: true, 
-baseForm: true,
-from: 0,
-max: 10);
+  startsWith: true,
+  superSet: true, 
+  subSet: true, 
+  baseForm: true,
+  from: 0,
+  max: 10);
 ``` 
 
 
-See the [API documentation](https://www.openthesaurus.de/about/api)(in german) for description of the parameters.
+See the [API documentation](https://www.openthesaurus.de/about/api) (in german) for description of the parameters.
