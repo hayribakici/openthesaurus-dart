@@ -20,29 +20,8 @@ class OpenThesaurusApiMock extends OpenThesaurusApi {
     });
   }
 
-  http.Response createErrorResponse(MockHttpError error) {
-    return http.Response(_wrapMessageToJson(error.statusCode!, error.message!),
-        error.statusCode!,
-        headers: {
-          HttpHeaders.contentTypeHeader: 'application/json; charset=utf-8'
-        }..addAll(error.headers ?? {}));
-  }
-
-  String _wrapMessageToJson(int statusCode, String message) =>
-      '{ \'error\': {\'status\':$statusCode,\'message\': \'$message\'}}';
-
   String _readResponse() {
     var file = File('test/data/response.json');
     return file.readAsStringSync();
-  }
-}
-
-class MockHttpError {
-  int? statusCode;
-  String? message;
-  Map<String, String>? headers;
-
-  MockHttpError({this.statusCode, this.message, this.headers}) {
-    headers;
   }
 }
