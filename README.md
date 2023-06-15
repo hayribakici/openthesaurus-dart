@@ -27,13 +27,23 @@ for (var syn in synonyms) {
 Retrieve synonyms with options with
 
 ```dart
-var response = ot.getWith(similar: true, startsWith: true, superSet: true, subSet: true, baseForm: true);
+var response = ot.getWith(similar: true,
+startsWith: true, 
+superSet: true, 
+subSet: true, 
+baseForm: true);
 ```
 
 or 
 
 ```dart
-var response = ot.getWithSubString(similar: true, startsWith: true, superSet: true, subSet: true, baseForm: true, from: 0, max: 10);
+var response = ot.getWithSubString(similar: true,
+startsWith: true,
+superSet: true, 
+subSet: true, 
+baseForm: true,
+from: 0,
+max: 10);
 ``` 
 
 
