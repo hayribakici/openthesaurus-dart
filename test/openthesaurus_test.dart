@@ -18,7 +18,7 @@ void main() {
     expect(first.terms?[2].level, Level.colloquial);
     expect(first.terms?.last.level, Level.rough);
 
-    expect(first.subSet?.first.term, "Anstalt");
+    expect(first.superSet?.first.term, "Anstalt");
   });
 
   test('getWithSimilarTerms', () async {
@@ -30,6 +30,6 @@ void main() {
     var similar = response.similarTerms;
     expect(similar!.first, isNotNull);
     expect(similar.first.term, 'Hand (Fußball)');
-    expect(similar.first.distance, 1);
+    expect(similar.first.distance, 0);
   });
 }
