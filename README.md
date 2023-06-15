@@ -27,7 +27,7 @@ for (var syn in synonyms) {
 Retrieve synonyms with options with
 
 ```dart
-var response = ot.getWith(similar: true,
+var response = ot.getWith('Hand', similar: true,
   startsWith: true, 
   superSet: true, 
   subSet: true, 
@@ -37,7 +37,7 @@ var response = ot.getWith(similar: true,
 or 
 
 ```dart
-var response = ot.getWithSubString(similar: true,
+var response = ot.getWithSubString('Hand', similar: true,
   startsWith: true,
   superSet: true, 
   subSet: true, 
