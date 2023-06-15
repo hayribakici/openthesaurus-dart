@@ -24,10 +24,8 @@ class OpenThesaurus {
   OpenThesaurus(this._api);
 
   /// Retrieve a collection of synonyms based on the given [query]
-  Future<List<SynonymSet>> get(String query) async {
-    assert(query.isNotEmpty, 'Search query cannot be empty');
-    return (await getWith(query)).synonymSet ?? [];
-  }
+  Future<List<SynonymSet>> get(String query) async =>
+      (await _getWith(query)).synonymSet ?? [];
 
   /// Retrieve a collection of synonyms based on the given [query] and
   /// with the following options. Retrieve ...
@@ -38,21 +36,20 @@ class OpenThesaurus {
   /// * [subSet] terms, that are more specific
   /// * the [baseForm] of the [query]
   Future<OpenThesaurusResponse> getWith(String query,
-      {bool similar = false,
-      bool startsWith = false,
-      bool superSet = false,
-      bool subSet = false,
-      bool baseForm = false}) async {
-    assert(query.isNotEmpty, 'Search query cannot be empty');
-    return await _api._get({
-      'q': query,
-      'similar': similar,
-      'startswith': startsWith,
-      'supersynsets': superSet,
-      'subsynsets': subSet,
-      'baseform': baseForm,
-    });
-  }
+          {bool similar = false,
+          bool startsWith = false,
+          bool superSet = false,
+          bool subSet = false,
+          bool baseForm = false}) async =>
+      await _getWith(query,
+          similar: similar,
+          startsWith: startsWith,
+          superSet: superSet,
+          subSet: subSet,
+          baseForm: baseForm,
+          subString: false,
+          from: 0,
+          max: 10);
 
   /// Retrieve a collection of synonyms based on the given [query] and
   /// with the following options. Retrieve ...
@@ -65,11 +62,30 @@ class OpenThesaurus {
   /// * terms that contain the substring of the [query], starting [from]
   /// a position until the [max].
   Future<OpenThesaurusResponse> getWithSubString(String query,
+          {bool similar = false,
+          bool startsWith = false,
+          bool superSet = false,
+          bool subSet = false,
+          bool baseForm = false,
+          int from = 0,
+          int max = 10}) async =>
+      _getWith(query,
+          similar: similar,
+          startsWith: startsWith,
+          superSet: superSet,
+          subSet: subSet,
+          baseForm: baseForm,
+          subString: true,
+          from: from,
+          max: max);
+
+  Future<OpenThesaurusResponse> _getWith(String query,
       {bool similar = false,
       bool startsWith = false,
       bool superSet = false,
       bool subSet = false,
       bool baseForm = false,
+      bool subString = false,
       int from = 0,
       int max = 10}) async {
     assert(query.isNotEmpty, 'Search query cannot be empty');
