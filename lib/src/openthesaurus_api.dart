@@ -1,8 +1,10 @@
 part of openthesaurus;
 
+/// Class for calling the openthesaurus.de API
 class OpenThesaurusApi {
   static const String _authority = 'www.openthesaurus.de';
 
+  /// Retrieve a synonyme based on the given [query].
   Future<OpenThesaurusResponse> _get(Map<String, dynamic> query) async {
     query.addAll({'format': 'application/json'});
     var response = await _getImpl(_authority, query, {
@@ -43,4 +45,5 @@ class OpenThesaurusApi {
       http.get(url, headers: headers);
 }
 
+/// Custom error class when the requests exceeds `>=60` requests/min.
 class ApiRequestExceededError extends Error {}

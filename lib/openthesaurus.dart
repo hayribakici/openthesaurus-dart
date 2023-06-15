@@ -15,18 +15,29 @@ import 'package:openthesaurus/openthesaurus.dart';
 
 part 'src/openthesaurus_api.dart';
 
+
 class OpenThesaurus {
+  /// Creates an instance of this class for requesting synonyms.
   factory OpenThesaurus.create() => OpenThesaurus(OpenThesaurusApi());
 
   final OpenThesaurusApi _api;
 
   OpenThesaurus(this._api);
 
+  /// Retrieve a collection of synonyms based on the given [query]
   Future<List<SynonymSet>> get(String query) async {
     assert(query.isNotEmpty, 'Search query cannot be empty');
     return (await getWith(query)).synonymSet ?? [];
   }
 
+  /// Retrieve a collection of synonyms based on the given [query] and
+  /// with the following options. Retrieve ...
+  /// 
+  /// * [similar] terms
+  /// * terms that [startsWith] the same letters as the [query]
+  /// * [superSet] terms, that are more generic
+  /// * [subSet] terms, that are more specific
+  /// * the [baseForm] of the [query]
   Future<OpenThesaurusResponse> getWith(String query,
       {bool similar = false,
       bool startsWith = false,
@@ -44,6 +55,16 @@ class OpenThesaurus {
     });
   }
 
+  /// Retrieve a collection of synonyms based on the given [query] and
+  /// with the following options. Retrieve ...
+  /// 
+  /// * [similar] terms
+  /// * terms that [startsWith] the same letters as the [query]
+  /// * [superSet] terms, that are more generic
+  /// * [subSet] terms, that are more specific
+  /// * the [baseForm] of the [query]
+  /// * terms that contain the substring of the [query], starting [from] 
+  /// a position until the [max].
   Future<OpenThesaurusResponse> getWithSubString(String query,
       {bool similar = false,
       bool startsWith = false,
