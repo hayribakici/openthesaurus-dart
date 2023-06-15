@@ -44,7 +44,7 @@ class OpenThesaurus {
     });
   }
 
-  Future<OpenThesaurusResponse> withSubString(String query,
+  Future<OpenThesaurusResponse> getWithSubString(String query,
       {bool similar = false,
       bool startsWith = false,
       bool superSet = false,

@@ -28,11 +28,14 @@ SimilarTerms _$SimilarTermsFromJson(Map<String, dynamic> json) => SimilarTerms()
       .toList();
 
 SynonymSet _$SynonymSetFromJson(Map<String, dynamic> json) => SynonymSet()
+  ..id = json['id'] as int?
   ..categories =
       (json['categories'] as List<dynamic>?)?.map((e) => e as String).toList()
   ..terms = (json['terms'] as List<dynamic>?)
       ?.map((e) => SynonymTerm.fromJson(e as Map<String, dynamic>))
-      .toList();
+      .toList()
+  ..superSet = SynonymSet._flatten(json['supersynsets'] as List?)
+  ..subSet = SynonymSet._flatten(json['subsynsets'] as List?);
 
 Term _$TermFromJson(Map<String, dynamic> json) =>
     Term()..term = json['term'] as String?;

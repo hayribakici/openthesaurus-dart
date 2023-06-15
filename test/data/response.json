@@ -10,7 +10,9 @@
   "synsets": [
     {
       "id": 13178,
-      "categories": [],
+      "categories": [
+        "Körper"
+      ],
       "terms": [
         {
           "term": "Hand"
@@ -38,11 +40,120 @@
       "supersynsets": [
         [
           {
-            "term": "K\u00f6rperteil"
+            "term": "Anstalt"
+          },
+          {
+            "term": "Laden",
+            "level": "umgangssprachlich"
           }
         ]
       ],
-      "subsynsets": []
+      "subsynsets": [
+        [
+          {
+            "term": "Hospiz"
+          },
+          {
+            "term": "Sterbehaus"
+          },
+          {
+            "term": "Sterbeklinik"
+          }
+        ],
+        [
+          {
+            "term": "Lazarett"
+          },
+          {
+            "term": "Milit\u00e4rhospital"
+          },
+          {
+            "term": "Milit\u00e4rkrankenhaus"
+          },
+          {
+            "term": "Soldatenkrankenanstalt"
+          }
+        ],
+        [
+          {
+            "term": "Kaiser-Jubil\u00e4ums-Spital"
+          },
+          {
+            "term": "Krankenhaus Hietzing"
+          },
+          {
+            "term": "Krankenhaus Lainz"
+          }
+        ],
+        [
+          {
+            "term": "Unfallkrankenhaus"
+          }
+        ],
+        [
+          {
+            "term": "Gef\u00e4ngniskrankenhaus"
+          },
+          {
+            "term": "Inquisitenspital"
+          }
+        ],
+        [
+          {
+            "term": "Ambulatorium"
+          },
+          {
+            "term": "Kreiskrankenhaus"
+          },
+          {
+            "term": "Poliklinik"
+          },
+          {
+            "term": "Stadtkrankenhaus"
+          }
+        ],
+        [
+          {
+            "term": "Intensive Care Unit"
+          },
+          {
+            "term": "Intensivpflegestation"
+          },
+          {
+            "term": "Intensivstation"
+          }
+        ],
+        [
+          {
+            "term": "Uniklinik"
+          },
+          {
+            "term": "Universit\u00e4tsklinikum"
+          },
+          {
+            "term": "Universit\u00e4tskrankenhaus"
+          },
+          {
+            "term": "Universit\u00e4tsspital"
+          }
+        ],
+        [
+          {
+            "term": "Akademisches Lehrkrankenhaus"
+          },
+          {
+            "term": "Lehrkrankenhaus"
+          }
+        ],
+        [
+          {
+            "term": "Landesklinikum"
+          },
+          {
+            "term": "Landeskrankenhaus"
+          }
+        ]
+      ]
     },
     {
       "id": 37737,
@@ -143,8 +254,7 @@
       "term": "(das) Aushandeln"
     }
   ],
-  "baseforms":[
+  "baseforms": [
     "Hand"
   ]
-
 }
