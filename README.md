@@ -1,4 +1,4 @@
-# Openthesaurus-dart
+# openthesaurus-dart
 
 This is a simple dart library for accessing the [openthesaurus](https://www.openthesaurus.de) api.
 
