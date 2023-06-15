@@ -41,20 +41,26 @@ class SynonymTerm extends Term {
 /// Level of usage of the word.
 enum Level {
   /// A colloquial term
-  colloquial(key: 'umgangssprachlich'),
+  colloquial(key: 'umgangssprachlich', abbr: 'ugs.'),
 
   /// A technical term
-  technical(key: 'fachsprachlich'),
+  technical(key: 'fachsprachlich', abbr: 'fachspr.'),
 
   /// A rough term
-  rough(key: 'derb'),
+  rough(key: 'derb', abbr: 'derb'),
 
   /// An exalted term
-  exalted(key: 'gehoben');
+  exalted(key: 'gehoben', abbr: 'geh.'),
 
-  const Level({required String key}) : _key = key;
+  // A figurative term
+  figurative(key: 'figurativ', abbr: 'fig.');
+
+  const Level({required String key, required this.abbr}) : _key = key;
 
   final String _key;
+
+  /// The abbriviation of the level. Used for output
+  final String abbr;
 
   static Level fromKey(String key) =>
       values.firstWhere((element) => element._key == key);
