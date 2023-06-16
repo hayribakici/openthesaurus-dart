@@ -6,3 +6,7 @@
 
 - adds new `Level` entry `figurative`
 - some refactoring
+
+## 0.0.5
+
+- adds `startsWithTerms` property
