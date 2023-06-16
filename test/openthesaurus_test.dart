@@ -21,11 +21,12 @@ void main() {
     expect(first.superSet?.first.term, "Anstalt");
   });
 
-  test('getWithSimilarTerms', () async {
+  test('getall', () async {
     var response = await openthesaurus.getWith('query');
     expect(response, isNotNull);
     expect(response.similarTerms, isNotNull);
     expect(response.similarTerms, isNotEmpty);
+    expect(response.startsWithTerms, isNotEmpty);
 
     var similar = response.similarTerms;
     expect(similar!.first, isNotNull);

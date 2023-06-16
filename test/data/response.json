@@ -200,6 +200,38 @@
       "subsynsets": []
     }
   ],
+  "startswithterms": [
+    {
+      "term": "Hand"
+    },
+    {
+      "term": "Hand (Fu\u00dfball)"
+    },
+    {
+      "term": "Hand an sich legen"
+    },
+    {
+      "term": "Hand anlegen"
+    },
+    {
+      "term": "Hand aufs Herz"
+    },
+    {
+      "term": "Hand aufs Herz und ehrlich gelogen!"
+    },
+    {
+      "term": "Hand aufs Herz: ..."
+    },
+    {
+      "term": "Hand in Hand"
+    },
+    {
+      "term": "Hand in Hand arbeiten"
+    },
+    {
+      "term": "Hand in Hand gehen (mit)"
+    }
+  ],
   "similarterms": [
     {
       "term": "Hand (Fu\u00dfball)",

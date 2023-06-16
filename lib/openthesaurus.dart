@@ -60,7 +60,8 @@ class OpenThesaurus {
   /// * [subSet] terms, that are more specific
   /// * the [baseForm] of the [query]
   /// * terms that contain the substring of the [query], starting [from]
-  /// a position until the [max].
+  /// a position 
+  /// * a [max] number of substring results
   Future<OpenThesaurusResponse> getWithSubString(String query,
           {bool similar = false,
           bool startsWith = false,
@@ -90,6 +91,7 @@ class OpenThesaurus {
       int max = 10}) async {
     assert(query.isNotEmpty, 'Search query cannot be empty');
     assert(from >= 0, 'Parameter \'from\' cannot be < 0');
+    assert(max > 0, 'Parameter \'max\' cannot be <= 0');
     return await _api._get({
       'q': query,
       'similar': similar,

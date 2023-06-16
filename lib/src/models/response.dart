@@ -16,6 +16,10 @@ class OpenThesaurusResponse {
   @JsonKey(name: 'similarterms')
   List<SimilarTerm>? similarTerms;
 
+  /// Terms that start with the same characters
+  @JsonKey(name: 'startswithterms')
+  List<Term>? startsWithTerms;
+
   /// The substring terms
   @JsonKey(name: 'substringterms')
   List<Term>? subStringTerms;
