@@ -1,7 +1,6 @@
 // Copyright (c) 2023, hayribakici. All rights reserved. Use of this source code
 // is governed by a BSD-style license that can be found in the LICENSE file.
 
-/// A dart library for interfacing with the API of openthesaurus.de.
 part of openthesaurus.models;
 
 /// Most simple class that represents a term (synonyme, similar written word etc.)
