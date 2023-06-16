@@ -25,11 +25,6 @@ OpenThesaurusResponse _$OpenThesaurusResponseFromJson(
           ?.map((e) => e as String)
           .toList();
 
-SimilarTerms _$SimilarTermsFromJson(Map<String, dynamic> json) => SimilarTerms()
-  ..similarTerms = (json['similarterms'] as List<dynamic>?)
-      ?.map((e) => SimilarTerm.fromJson(e as Map<String, dynamic>))
-      .toList();
-
 SynonymSet _$SynonymSetFromJson(Map<String, dynamic> json) => SynonymSet()
   ..id = json['id'] as int?
   ..categories =

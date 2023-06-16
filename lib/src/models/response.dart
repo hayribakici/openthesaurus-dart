@@ -29,19 +29,6 @@ class OpenThesaurusResponse {
   List<String>? baseForms;
 }
 
-/// Class that represents a similar terms json object
-@JsonSerializable(createToJson: false)
-class SimilarTerms {
-  factory SimilarTerms.fromJson(Map<String, dynamic> json) =>
-      _$SimilarTermsFromJson(json);
-
-  SimilarTerms();
-
-  /// The similar terms
-  @JsonKey(name: 'similarterms')
-  List<SimilarTerm>? similarTerms;
-}
-
 /// Json representation of a set of synonyms.
 @JsonSerializable(createToJson: false)
 class SynonymSet {
