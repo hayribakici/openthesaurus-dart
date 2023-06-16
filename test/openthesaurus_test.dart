@@ -1,3 +1,7 @@
+// Copyright (c) 2023, hayribakici. All rights reserved. Use of this source code
+// is governed by a BSD-style license that can be found in the LICENSE file.
+
+/// A dart library for interfacing with the API of openthesaurus.de.
 import 'package:openthesaurus/openthesaurus.dart';
 import 'package:test/test.dart';
 
@@ -32,5 +36,10 @@ void main() {
     expect(similar!.first, isNotNull);
     expect(similar.first.term, 'Hand (Fußball)');
     expect(similar.first.distance, 0);
+
+    var base = response.baseForms;
+    expect(base, isNotNull);
+    expect(base, isNotEmpty);
+    expect(base?.first, "Hand");
   });
 }

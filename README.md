@@ -4,7 +4,7 @@ This is a simple dart library for accessing the [openthesaurus](https://www.open
 
 ## Usage
 
-Create an instance with 
+Create an instance with
 
 ```dart
 
@@ -34,7 +34,7 @@ var response = ot.getWith('Hand', similar: true,
   baseForm: true);
 ```
 
-or 
+or
 
 ```dart
 var response = ot.getWithSubString('Hand', similar: true,
@@ -44,7 +44,6 @@ var response = ot.getWithSubString('Hand', similar: true,
   baseForm: true,
   from: 0,
   max: 10);
-``` 
-
+```
 
 See the [API documentation](https://www.openthesaurus.de/about/api) (in german) for description of the parameters.
