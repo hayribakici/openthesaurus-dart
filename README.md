@@ -46,4 +46,4 @@ var response = ot.getWithSubString('Hand', similar: true,
   max: 10);
 ```
 
-See the [API documentation](https://www.openthesaurus.de/about/api) (in german) for description of the parameters.
+See the [pub.dev API documentation](https://pub.dev/documentation/openthesaurus/latest/) for description of the parameters.
