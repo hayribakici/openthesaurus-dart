@@ -2,6 +2,14 @@
 
 This is a simple dart library for accessing the [openthesaurus](https://www.openthesaurus.de) api.
 
+## Get it through [pub.dev](https://pub.dev/packages/openthesaurus)
+
+```yaml
+...
+dependencies:
+  openthesaurus: <latest_version>
+```
+
 ## Usage
 
 Create an instance with
