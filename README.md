@@ -10,6 +10,13 @@ dependencies:
   openthesaurus: <latest_version>
 ```
 
+or
+
+```
+dart pub add openthesaurus
+```
+
+
 ## Usage
 
 Create an instance with
@@ -35,23 +42,36 @@ for (var syn in synonyms) {
 Retrieve synonyms with options with
 
 ```dart
-var response = ot.getWith('Hand', similar: true,
-  startsWith: true, 
-  superSet: true, 
-  subSet: true, 
-  baseForm: true);
+var response = ot.getWith('Hand', 
+  similar: true,     // return similar terms
+  startsWith: true,  // return terms that start with the query
+  superSet: true,    // return generic terms
+  subSet: true,      // return specific terms
+  baseForm: true     // return base form of query term
+);
+
+var synonyms = response.synonymSet;
+...
+var similar = response.similarTerms;
+...
+var startsWithTerms = response.startsWithTerms;
+...
+var baseForms = responce.baseForms;
 ```
 
-or
+or more specifically 
 
 ```dart
-var response = ot.getWithSubString('Hand', similar: true,
-  startsWith: true,
-  superSet: true, 
-  subSet: true, 
-  baseForm: true,
-  from: 0,
-  max: 10);
+var response = ot.getWithSubString('Hand', 
+  similar: true,     // return similar terms
+  startsWith: true,  // return terms that start with the query
+  superSet: true,    // return generic terms
+  subSet: true,      // return specific terms
+  baseForm: true     // return base form of query term
+  from: 0,           // index of the substring to start
+  max: 10            // maximum number of substring results
+);
+
 ```
 
-See the [pub.dev API documentation](https://pub.dev/documentation/openthesaurus/latest/openthesaurus/openthesaurus-library.html) for description of the parameters.
+See the [pub.dev API documentation](https://pub.dev/documentation/openthesaurus/latest/openthesaurus/openthesaurus-library.html) for description of the parameters and return types.
