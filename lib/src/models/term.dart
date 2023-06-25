@@ -27,9 +27,6 @@ class SimilarTerm extends Term {
 /// A term representing a synomyme.
 @JsonSerializable(createToJson: false)
 class SynonymTerm extends Term {
-  static Level? _levelFromJson(String? json) =>
-      json != null ? Level.fromKey(json) : null;
-
   factory SynonymTerm.fromJson(Map<String, dynamic> json) =>
       _$SynonymTermFromJson(json);
 
@@ -37,11 +34,11 @@ class SynonymTerm extends Term {
 
   /// Level of term usage. Can be [Level.colloquial],
   /// [Level.exalted], [Level.rough] or a [Level.technical] term.
-  @JsonKey(fromJson: _levelFromJson)
   Level? level;
 }
 
 /// Level of usage of the word.
+@JsonEnum(valueField: 'key')
 enum Level {
   /// A colloquial term
   colloquial(key: 'umgangssprachlich', abbr: 'ugs.'),
@@ -58,13 +55,11 @@ enum Level {
   // A figurative term
   figurative(key: 'figurativ', abbr: 'fig.');
 
-  const Level({required String key, required this.abbr}) : _key = key;
+  const Level({required this.key, required this.abbr});
 
-  final String _key;
+  /// The value from the json response
+  final String key;
 
   /// The abbriviation of the level. Used for output
   final String abbr;
-
-  static Level fromKey(String key) =>
-      values.firstWhere((element) => element._key == key);
 }

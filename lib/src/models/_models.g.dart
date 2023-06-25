@@ -44,4 +44,12 @@ SimilarTerm _$SimilarTermFromJson(Map<String, dynamic> json) => SimilarTerm()
 
 SynonymTerm _$SynonymTermFromJson(Map<String, dynamic> json) => SynonymTerm()
   ..term = json['term'] as String?
-  ..level = SynonymTerm._levelFromJson(json['level'] as String?);
+  ..level = $enumDecodeNullable(_$LevelEnumMap, json['level']);
+
+const _$LevelEnumMap = {
+  Level.colloquial: 'umgangssprachlich',
+  Level.technical: 'fachsprachlich',
+  Level.rough: 'derb',
+  Level.exalted: 'gehoben',
+  Level.figurative: 'figurativ',
+};
