@@ -30,6 +30,14 @@ class OpenThesaurusResponse {
   /// The base forms
   @JsonKey(name: 'baseforms')
   List<String>? baseForms;
+
+  /// Returns [true] if the response has no information.
+  bool get isEmpty =>
+      (synonymSet?.isEmpty ?? true) &&
+      (similarTerms?.isEmpty ?? true) &&
+      (startsWithTerms?.isEmpty ?? true) &&
+      (subStringTerms?.isEmpty ?? true) &&
+      (subStringTerms?.isEmpty ?? true);
 }
 
 /// Json representation of a set of synonyms.
