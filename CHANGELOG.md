@@ -10,3 +10,7 @@
 ## 0.0.5
 
 - adds `startsWithTerms` property
+
+## 0.0.6
+
+- adds `Response.isEmpty` property for checking if response contains any information.
