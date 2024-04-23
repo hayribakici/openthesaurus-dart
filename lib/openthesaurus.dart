@@ -59,7 +59,7 @@ class OpenThesaurus {
   /// * [subSet] terms, that are more specific
   /// * the [baseForm] of the [query]
   /// * terms that contain the substring of the [query], starting [from]
-  /// a position 
+  /// a position
   /// * a [max] number of substring results
   Future<OpenThesaurusResponse> getWithSubString(String query,
           {bool similar = false,
